@@ -90,7 +90,6 @@ export default function Player() {
     }
   }, [progress])
 
-  console.log(currentTrack);
   return (
     <div className="fixed bottom-10 right-10 bg-gray-100 w-64 rounded-lg border-black border-2 overflow-hidden">
       <div className="flex-1 bg-gray-200 h-1.5 dark:bg-gray-700">

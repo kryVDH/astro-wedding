@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import programBg from '../photos/program-bg.jpg';
+import { getImage } from 'astro/assets';
+const optimizedBackground = await getImage({src: programBg, format: 'webp'});
+---
+
+
+<Layout title='Program'>
+    <main>
+        <div class="h-screen relative">
+            <div style={` position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                background-image: url(${optimizedBackground.src});
+                background-size: cover;
+                background-position-y: 50%;
+                filter: grayscale(100%);`}></div>
+            <h1 transition:name="program-transition" class="mx-auto w-fit" style="color: white; padding-top: 100px;">Wedding Program</h1>
+            <p>What's happening?</p>
+        </div>
+        <div class="mb-10">
+            <h2 class="mx-auto w-fit my-8">When and where?</h2>
+            <div class="flex flex-row mx-5 justify-center gap-5">
+                <div class="w-1/4 border-b-black border-b-2">
+                    <h3 class="mx-auto w-fit text-3xl italic">Ceremony</h3>
+                    <p class="text-lg font-bold">15 Shannon Boulevard</p>
+                    <p class="text-lg">11:30AM</p>
+                </div>
+                <div class="w-1/4 border-b-black border-b-2">
+                    <h3 class="mx-auto w-fit text-3xl italic">Reception</h3>
+                    <p class="text-lg font-bold">Club Eastwood</p>
+                    <p class="text-lg">12:30PM</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+    </style>
+</Layout>

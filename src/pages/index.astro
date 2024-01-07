@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { Image } from 'astro:assets';
+import mainImage from '../photos/main.jpg'
 ---
 
 <Layout title="Kyle & Jasmine's Wedding.">
@@ -8,12 +10,16 @@ import Card from '../components/Card.astro';
 		<h1>Jasmine & Kyle</h1>
 		<article class="w-full grid grid-cols-2">
 			<div class="flex justify-center items-center">
-				<div class="bg-black rounded-full w-96 h-96"></div>
+				<div class="bg-black rounded-full w-96 h-96 overflow-hidden">
+					<Image width={500} src={mainImage} alt="Kyle and Jasmine holding hands"></Image>
+				</div>
 			</div>
 			<div>
-				<h2>This is our wedding site</h2>
-				<p>Here is some description text....</p>
-				<a href="/test">test</a>
+				<h2>July 12 2024</h2>
+				<p>Here's all the information you need:</p>
+				<ul>
+					<li><a href="/program" transition:name="program-transition">Wedding Program</a></li>
+				</ul>			
 			</div>
 		</article>
 	</main>
