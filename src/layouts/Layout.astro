@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import { Icon } from 'astro-icon/components'
 import Player from '../components/react/Player';
+import Nav from '../components/react/nav';
 interface Props {
 	title: string;
 }
@@ -19,13 +20,14 @@ const backButtonVisible = Astro.url.pathname != '/';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
+	<Nav></Nav>
 	<body>
-		{backButtonVisible && <a onclick="history.back()" class="top-4 left-4 z-10 w-16 h-16 fixed">
+		{backButtonVisible && <a onclick="history.back()" class="top-14 left-2 z-10 w-12 h-12 fixed">
 				<Icon name="mdi:chevron-left" class="h-full w-full text-white"></Icon>
 			</a>}
 		<slot />
@@ -70,7 +72,7 @@ const backButtonVisible = Astro.url.pathname != '/';
 			monospace;
 	}
 	h1 {
-		font-family: 'Dancing Script', cursive;
+		font-family: 'Tangerine';
 		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;
@@ -85,15 +87,23 @@ const backButtonVisible = Astro.url.pathname != '/';
 	}
 
 	a {
-		color: var(--lightgreen);
 		transition: all 0.2s;
+		cursor: pointer;
 	}
 
 	a:hover {
 		text-decoration: underline;
 	}
 
-	a:visited {
+	/* a:visited {
 		color: var(--darkgreen);
+	} */
+
+	.font-dancing {
+		font-family: 'Tangerine';
+	}
+
+	nav {
+		background-color: rgb(var(--accent));
 	}
 </style>
