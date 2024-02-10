@@ -6,7 +6,7 @@ const PlayIcon = (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     fill="currentColor"
-    className="w-8 h-8"
+    className="lg:h-8 lg:w-8 w-5 h-5"
   >
     <path
       fillRule="evenodd"
@@ -21,7 +21,7 @@ const PauseIcon = (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     fill="currentColor"
-    className="w-8 h-8"
+    className="lg:h-8 lg:w-8 w-5 h-5"
   >
     <path
       fillRule="evenodd"
@@ -91,12 +91,12 @@ export default function Player() {
   }, [progress])
 
   return (
-    <div className="fixed bottom-10 right-10 bg-gray-100 w-64 rounded-lg border-black border-2 overflow-hidden">
+    <div className="fixed lg:bottom-10 lg:right-10 right-5 bottom-5 bg-gray-100 lg:w-64 w-48 rounded-lg border-black border-2 overflow-hidden">
       <div className="flex-1 bg-gray-200 h-1.5 dark:bg-gray-700">
         <div className="bg-pink-500 h-1.5" style={{width: `${progress}%`}}></div>
       </div>
-      <div className="container mx-auto max-w-screen-lg px-4 py-1 flex items-center gap-5">
-        <img src={imageUrl} width="30" height="30" className="block rounded-md" />
+      <div className="container mx-auto lg:px-4 px-2 py-1 flex items-center gap-5">
+        <img src={imageUrl} className="block rounded-md lg:h-8 lg:w-8 w-5 h-5" />
         <div className="flex-1 min-w-0">
           <p className="text-lg font-medium overflow-hidden text-ellipsis whitespace-nowrap">
             {title}
