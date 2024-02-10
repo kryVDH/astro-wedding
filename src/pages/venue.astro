@@ -5,11 +5,19 @@ import programBg from '../photos/program-bg.jpg';
 ---
 
 <Layout title='Venue'>
-    <main>
-        <h1>Venue</h1>
-        <div class="min-h-screen relative mx-auto flex flex-wrap justify-center gap-4">
-            <div>
-                Google maps embed
+    <main class="min-h-screen mt-16">
+        <h1 transition:name="venue-transition">Venue</h1>
+        <div class="relative mx-auto flex flex-wrap justify-center gap-4 mt-8">
+            <div class="flex items-center">
+                <iframe
+                    class="max-w-full"
+                    width="600"
+                    height="250"
+                    style="border:0"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5buHsh-AL2sRUKZvCEvltF0&key=AIzaSyAxeazyzmkzcGL-ZLISqtHD3GolEqEZ4pg"
+                    allowfullscreen>
+                    </iframe>
             </div>
             <div>
                 <h2>Club Eastwood</h2>
