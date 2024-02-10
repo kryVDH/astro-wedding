@@ -3,6 +3,7 @@ import { ViewTransitions } from 'astro:transitions';
 import { Icon } from 'astro-icon/components'
 import Player from '../components/react/Player';
 import Nav from '../components/react/nav';
+
 interface Props {
 	title: string;
 }
@@ -99,11 +100,28 @@ const backButtonVisible = Astro.url.pathname != '/';
 		color: var(--darkgreen);
 	} */
 
+	* {
+		-webkit-margin-collapse: discard;
+	}
+
 	.font-dancing {
 		font-family: 'Pinyon Script';
 	}
 
 	nav {
 		background-color: rgb(var(--accent));
+	}
+
+	.parallax {
+		/* The image used */
+
+		/* Full height */
+		height: 100%; 
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 </style>
