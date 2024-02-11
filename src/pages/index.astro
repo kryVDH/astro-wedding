@@ -12,7 +12,7 @@ import bgImage from '../photos/main-bg-cropped.jpg'
 			<div class="flex flex-col items-center pt-10 parallax relative" style={`background-image: url(${bgImage.src})`}>
 				<div class="h-full w-full opacity-40 absolute top-0 bg-white"></div>
 				<div class="bg-none z-10 min-h-screen">
-					<h1>July 12 2024</h1>
+					<h1 class="text-black">July 12 2024</h1>
 					<p>Here's all the information you need:</p>
 					<ul>
 						<li><a href="/program">Wedding Program</a></li>
@@ -24,6 +24,9 @@ import bgImage from '../photos/main-bg-cropped.jpg'
 </Layout>
 
 <style>
+	h1 {
+		font-size: 64px;
+	}
 	main {
 		margin: auto;
 		color: black;

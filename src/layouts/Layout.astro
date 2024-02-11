@@ -3,6 +3,7 @@ import { ViewTransitions } from 'astro:transitions';
 import { Icon } from 'astro-icon/components'
 import Player from '../components/react/Player';
 import Nav from '../components/react/nav';
+import '../styles/main.scss';	
 
 interface Props {
 	title: string;
@@ -79,6 +80,7 @@ const backButtonVisible = Astro.url.pathname != '/';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+		color: #024c3c;
 	}
 	h2 {
 		font-size: 3rem;

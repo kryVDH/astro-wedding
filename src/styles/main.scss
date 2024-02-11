@@ -1,0 +1,47 @@
+form {
+    .form-text {
+        max-width: 64ch;
+        padding: 4px 8px;
+        border-radius: 8px;
+        font-family: 'roboto';
+        border: 2px solid #698C6D;
+    }
+
+    label {
+        color: #024C3C;
+        font-weight: 600;
+        font-family: 'roboto';
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .actions {
+        .submit {
+            font-family: 'Roboto';
+            border-radius: 10px;
+            background: rgba(212, 147, 139, 0.15);
+            border: 2px solid #D7bb98;
+            min-height: 44px;
+            min-width: 10ch;
+            padding: 8px 8px;
+            color: #024C3C;
+            font-weight: bold;
+
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.text-darkgreen {
+    color: #024C3C;
+}
+
+.text-lightgreen {
+    color: #698C6D;
+}
