@@ -1,3 +1,8 @@
+$tan: #D7BB98;
+$lightgreen: #698c6d;
+$peach: #d4938b;
+$darkgreen: #024c3c;
+
 form {
     .form-text {
         max-width: 64ch;
@@ -44,4 +49,48 @@ form {
 
 .text-lightgreen {
     color: #698C6D;
+}
+
+.card {
+    padding: 1rem;
+    margin-top: 2rem;
+    background: lighten($tan, 20%);
+    border: 2px solid $darkgreen;
+}
+
+.program {
+    padding: 1rem;
+    margin-top: 2rem;
+    background: lighten($tan, 40%);
+    border: 2px solid $darkgreen;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    li {
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+
+.faq {
+    dd, dt {
+        text-align: center;
+        max-width: 80ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    dt {
+        font-family: 'Quattrocento';
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    dd {
+        font-size: 16px;
+    }
 }

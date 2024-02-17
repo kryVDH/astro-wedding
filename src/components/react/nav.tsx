@@ -5,6 +5,7 @@ export default function Nav() {
             <li className="ml-auto"><a href="/venue">VENUE</a></li>
             <li><a href="/program">PROGRAM</a></li>
             <li><a href="/rsvp">RSVP</a></li>
+            <li><a href="/faq">FAQ</a></li>
         </ul>
     </nav>)
 }
