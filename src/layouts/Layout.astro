@@ -22,8 +22,9 @@ const backButtonVisible = Astro.url.pathname != '/';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Quattrocento&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Quattrocento&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
+		<script src="https://kit.fontawesome.com/93785fb270.js" crossorigin="anonymous"></script>
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
@@ -69,7 +70,7 @@ const backButtonVisible = Astro.url.pathname != '/';
 			monospace;
 	}
 	h1 {
-		font-family: 'Quattrocento';
+		font-family: 'Playfair Display';
 		font-size: 3rem;
 		font-weight: 400;
 		line-height: 1;
@@ -78,6 +79,7 @@ const backButtonVisible = Astro.url.pathname != '/';
 		color: #024c3c;
 	}
 	h2 {
+		font-family: 'Playfair Display';
 		font-size: 3rem;
 		font-weight: 500;
 		line-height: 1;
@@ -102,7 +104,8 @@ const backButtonVisible = Astro.url.pathname != '/';
 	}
 
 	.font-dancing {
-		font-family: 'Pinyon Script';
+		/* font-family: 'Pinyon Script'; */
+		font-family: 'Lato';
 	}
 
 	.parallax {
@@ -116,5 +119,9 @@ const backButtonVisible = Astro.url.pathname != '/';
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+
+	p {
+		max-width: 80ch;
 	}
 </style>

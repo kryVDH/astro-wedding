@@ -1,24 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import mainImage from '../photos/main-3.jpg'
-import bgImage from '../photos/main-bg-cropped.jpg'
+import mainImage from '../photos/main-3.jpg';
+import bgImage from '../photos/main-bg-cropped.jpg';
+import logo from '../photos/logo.png';
+import clubeastwood from '../photos/clubeastwood.jpg';
 ---
 
 <Layout title="Kyle & Jasmine's Wedding.">
 	<main class="min-h-screen overflow-hidden">
 		<article class="w-full flex-col">
-			<Image class="w-full" width={1500} src={mainImage} loading={'eager'} alt="Kyle and Jasmine holding hands"></Image>
+			<Image class="w-full" width={1000} src={mainImage} loading={'eager'} alt="Kyle and Jasmine holding hands"></Image>
 			<div class="flex flex-col items-center pt-10 parallax relative" style={`background-image: url(${bgImage.src})`}>
-				<div class="h-full w-full opacity-40 absolute top-0 bg-white"></div>
-				<div class="bg-none z-10 min-h-screen w-full max-w-5xl mx-auto">
-					<h1 class="text-black mb-0">July 12 2024</h1>
-					<div class="home-border"></div>
-					<p>Here's all the information you need:</p>
-					<ul>
-						<li><a href="/program">Wedding Program</a></li>
-					</ul>
-				</div>			
+				<div class="h-full w-full opacity-60 absolute top-0 bg-white"></div>
+				<div class="bg-none z-10 min-h-screen w-full max-w-5xl mx-auto flex flex-col justify-center mb-16">
+					<Image class="mx-auto" width={300} src={logo} loading={'lazy'} alt="Kyle and Jasmine" style="box-shadow: inset 0px 0px 10px #555, 0px 0px 11px #555;"></Image>
+					<h1 class="text-black mb-0 text-center"><span class="text-2xl">Invite you to their wedding on</span> <br/> July 12 2024</h1>
+					<div class="flex justify-center w-full mt-8 mb-4"><a href="/rsvp" class="mx-auto rounded-lg rsvp-btn text-2xl font-bold text-black">RSVP BY 10th May 2024</a></div>
+					<div class="home-border mt-8 mb-8"></div>
+					<h2 class="mb-0 text-center"><a href="/venue" class="underline" transition:name="venue-transition">Club Eastwood</a></h2>
+					<p class="text-xl mx-auto" transition:name="venue-address">117 Great Alpine Road, Bairnsdale</p>
+					<Image class="mx-auto border-black border-2 border-solid my-8" width={800} src={clubeastwood} loading={'lazy'} alt="Club Eastwood entrance" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
+					<div class="home-border mt-8 mb-8"></div>
+					<h2 class="mb-0 text-center">Our Message</h2>
+					<blockquote>We are so excited to share this day with all of you. We hope you'll join us on the 12th of July to celebrate our  big day! If you have questions, we might have answers on our FAQS page, if not please don't hesitate to message the couple</blockquote>
+					<div class="home-border mt-8 mb-8"></div>
+					<h2 class="mb-4 text-center">Info for the wedding</h2>
+					<p class="px-20 font-semibold">The ceremony is to be held in our backyard with no cover (except in the event of rain). Reception will be indoors with assigned seats and the bar will be open for drink orders. Dress code will be semi-formal and we ask that you please try to incorporate the below colour palette.</p>
+					<div class="colour-palette mx-auto flex items-center gap-4 my-4">
+						<div class="w-full flex justify-center items-center">
+							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #D7BB98;"></div>
+						</div>
+						<div class="w-full flex justify-center items-center">
+							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #698c6d;"></div>
+						</div>
+						<div class="w-full flex justify-center items-center">
+							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #d4938b;"></div>
+						</div>
+						<div class="w-full flex justify-center items-center">
+							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #024c3c;"></div>
+						</div>
+					</div>
+					<div class="home-border mt-8 mb-8"></div>
+					<h2 class="mb-4 text-center">Hotels</h2>
+					<p class="px-20 font-semibold">There are several hotels and inns in the area if you wish to stay in Bairnsdale over the weekend/ overnight. <a class="underline" href="/hotels">Here</a> are the list of hotels and inns</p>
+				</div>
 			</div>
 		</article>
 	</main>

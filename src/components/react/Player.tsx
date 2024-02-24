@@ -106,7 +106,7 @@ export default function Player() {
   }, [progress])
 
   return (
-    <div className="fixed lg:bottom-10 lg:right-10 right-5 bottom-5 bg-gray-100 lg:w-64 w-48 rounded-lg border-black border-2 overflow-hidden">
+    <div className="fixed lg:bottom-10 lg:right-10 right-5 bottom-5 bg-gray-100 lg:w-64 w-48 rounded-lg border-black border-2 overflow-hidden z-50">
       <div className="flex-1 bg-gray-200 h-1.5 dark:bg-gray-700">
         <div className="bg-pink-500 h-1.5" style={{width: `${progress}%`}}></div>
       </div>

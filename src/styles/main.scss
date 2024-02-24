@@ -4,7 +4,8 @@ $peach: #d4938b;
 $darkgreen: #024c3c;
 
 html {
-    font-family: 'eb garamond';
+    // font-family: 'eb garamond';
+    font-family: 'Playfair Display';
     background: lighten($tan, 15%);
     min-height: 100vh;
 }
@@ -91,7 +92,8 @@ form {
     }
 
     dt {
-        font-family: 'Quattrocento';
+        // font-family: 'Quattrocento';
+        font-family: 'Playfair Display';
         font-weight: bold;
         font-size: 22px;
     }
@@ -114,8 +116,6 @@ nav {
     width: 100%;
     max-width: 800px;
     border-bottom: 3px solid rgba($color: $darkgreen, $alpha: 1);
-    margin-bottom: 8px;
-    padding-bottom: 8px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -146,4 +146,47 @@ nav.closed {
     svg.open {
         display: block;
     }
+}
+
+.rsvp-btn {
+    font-family: 'Lato';
+    border-color: $darkgreen;
+    border: 3px solid;
+    background-color: lighten($lightgreen, 20%);
+    padding: 8px 48px;
+    transition: 100ms;
+    box-shadow: 2px 2px 5px #555;
+
+    &:hover {
+        text-decoration: underline;
+        box-shadow: 3px 3px 6px #555;
+    }
+}
+
+
+blockquote {
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    padding: 40px 80px 40px;
+    position: relative;
+}
+blockquote p {
+    font-family: "Utopia-italic";
+    font-size: 35px;
+    font-weight: 700px;
+    text-align: center;
+}
+
+ blockquote:before {
+    position: absolute;
+    font-family: "FontAwesome";
+    top: -40px;
+    content: "\f10d";
+    font-size: 120px;
+    color: rgba(0, 0, 0, 0.25);
+   
+}
+
+.little-box-shadow {
+    box-shadow: 5px 5px 10px 1px #555;
 }

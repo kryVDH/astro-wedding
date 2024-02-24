@@ -1,11 +1,14 @@
 ---
+import { getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import bgImage from '../photos/hands.jpg'
+
+const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 ---
 
 <Layout title='Venue'>
     <main class="min-h-screen mt-12">
-        <div class="flex flex-col items-center pt-10 parallax relative" style={`background-image: url(${bgImage.src})`}>
+        <div class="flex flex-col items-center pt-10 parallax relative" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
             <h1 class="mx-auto text-4xl text-center pl-8 z-10">FREQUENTLY ASKED QUESTIONS</h1>
             <dl class="flex flex-col gap-6 justify-center faq mb-32 z-10">
@@ -19,7 +22,21 @@ import bgImage from '../photos/hands.jpg'
                 </div>
                 <div class="flex flex-col align justify-center gap-0">
                     <dt>What is the dress code?</dt>
-                    <dd>We'd love to see our family and friends get dressed up for our big day. Dress code is semi-formal attire with this colour motif. (insert colour palette)</dd>
+                    <dd>We'd love to see our family and friends get dressed up for our big day. Dress code is semi-formal attire with this colour motif.</dd>
+                    <div class="colour-palette mx-auto flex items-center gap-4 my-4">
+						<div class="w-full flex justify-center items-center">
+							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #D7BB98;"></div>
+						</div>
+						<div class="w-full flex justify-center items-center">
+							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #698c6d;"></div>
+						</div>
+						<div class="w-full flex justify-center items-center">
+							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #d4938b;"></div>
+						</div>
+						<div class="w-full flex justify-center items-center">
+							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #024c3c;"></div>
+						</div>
+					</div>
                 </div>
                 <div class="flex flex-col align justify-center gap-0">
                     <dt>Can I bring a plus one?</dt>
