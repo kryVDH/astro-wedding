@@ -27,15 +27,15 @@ const backButtonVisible = Astro.url.pathname != '/';
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<Nav></Nav>
-	<body>
+	<Nav client:load transition:persist="nav">
+		<Icon name="mdi:menu" class="h-8 w-8 text-black open"></Icon>
+		<Icon name="mdi:close-box-outline" class="h-8 w-8 text-black close"></Icon>
+	</Nav>
+	<body class="overflow-hidden">
 		{backButtonVisible && <a onclick="history.back()" class="top-14 left-2 z-10 w-12 h-12 fixed">
 				<Icon name="mdi:chevron-left" class="h-full w-full text-white"></Icon>
 			</a>}
 		<slot />
-		<!-- <footer class="bg-white border-t-2 border-t-slate-400">
-			<span class="flex justify-center">Kyle & Jasmine's wedding site</span>
-		</footer> -->
 		<div id="audio-player">
 			<Player client:load transition:persist="player" />
 		</div>
@@ -56,11 +56,6 @@ const backButtonVisible = Astro.url.pathname != '/';
 		--lightgreen: #698c6d;
 		--peach: #d4938b;
 		--darkgreen: #024c3c;
-	}
-	html {
-		font-family: 'eb garamond';
-		background: var(--accent-gradient);
-		min-height: 100vh;
 	}
 	code {
 		font-family:
@@ -108,10 +103,6 @@ const backButtonVisible = Astro.url.pathname != '/';
 
 	.font-dancing {
 		font-family: 'Pinyon Script';
-	}
-
-	nav {
-		background-color: rgb(var(--accent));
 	}
 
 	.parallax {

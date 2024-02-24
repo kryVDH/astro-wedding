@@ -1,59 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import bgImage from '../photos/hands.jpg'
 ---
 
 <Layout title='Venue'>
-    <main class="min-h-screen mt-12 pt-4">
-        <h1 class="mx-auto text-4xl text-center pl-8">FREQUENTLY ASKED QUESTIONS</h1>
-        <dl class="flex flex-col gap-6 justify-center faq mb-32">
-            <div class="flex flex-col align justify-center">
-                <dt>When is the RSVP deadline?</dt>
-                <dd>Idk</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>What time should we arrive for the ceremony?</dt>
-                <dd>Drinks and little finger food will be ready for everyone before the ceremony. So if you wish to mingle and have something to drink, please arrive no later than 11:15am. Ceremony will punctually start at 11:30am and we wish everyone to be seated  by then.</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>What is the dress code?</dt>
-                <dd>We'd love to see our family and friends get dressed up for our big day. Dress code is semi-formal attire with this colour motif. (insert colour palette)</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>Can I bring a plus one?</dt>
-                <dd>Due to limited space, we can only accommodate those guests formally invited and listed on the guest list page. Thank you for understanding!</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>Are kids invited?</dt>
-                <dd>We love little ones, thus they are welcome to the wedding provided that they would not interrupt the proceedings/ceremony. Little activities would be provided to keep them entertained during the wedding reception.</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>Can I take photos during the ceremony?</dt>
-                <dd>The only request we would like to make is to please put your phones and cameras away for the wedding ceremony. We are having an “Unplugged” Ceremony (no phones or cameras). We have hired professionals to capture this special moment for us. So please allow them to do their best work. AFTER the ceremony, please feel free to take as many photos and videos as you'd like.</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>What should I do if I have a dietary restriction?</dt>
-                <dd>Please let us know in advance if you have any dietary restrictions. Alternatively, you can write down your dietary restrictions when you RSVP.</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>What time does the reception start?</dt>
-                <dd>We aim to have the reception start at 1:00PM. If you arrive before then, you can use this time to sign the wedding guestbook, mingle and find your seats. Canapes will be available for all and the bar will be open for everyone to grab drinks.</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>When is the appropriate time to leave?</dt>
-                <dd>We wish for everyone to stay until the end of the wedding reception. But if you wish to leave early, we’d love to personally thank you and to bid you goodbye before you go.</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>Why is RSVP so important?</dt>
-                <dd>It is important for us to  know which guests would be able to attend so that we would able to get the final head count and to cater to the dietary requirements if any. Please <a href="/rsvp" transition:name="rsvp-transition">RSVP here</a> if you havent done so.</dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>How can we help the couple have the best time during their wedding?</dt>
-                <dd></dd>
-            </div>
-            <div class="flex flex-col align justify-center gap-0">
-                <dt>Do you have any gift preference?</dt>
-                <dd></dd>
-            </div>
-        </dl>
+    <main class="min-h-screen mt-12">
+        <div class="flex flex-col items-center pt-10 parallax relative" style={`background-image: url(${bgImage.src})`}>
+            <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
+            <h1 class="mx-auto text-4xl text-center pl-8 z-10">FREQUENTLY ASKED QUESTIONS</h1>
+            <dl class="flex flex-col gap-6 justify-center faq mb-32 z-10">
+                <div class="flex flex-col align justify-center">
+                    <dt>When is the RSVP deadline?</dt>
+                    <dd><strong class="text-xl">PLEASE RSVP BY 10TH OF MAY 2024</strong></dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>What time should we arrive for the ceremony?</dt>
+                    <dd>Drinks and little finger food will be ready for everyone before the ceremony. So if you wish to mingle and have something to drink, please arrive no later than 11:15am. Ceremony will punctually start at 11:30am and we wish everyone to be seated  by then.</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>What is the dress code?</dt>
+                    <dd>We'd love to see our family and friends get dressed up for our big day. Dress code is semi-formal attire with this colour motif. (insert colour palette)</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>Can I bring a plus one?</dt>
+                    <dd>Due to limited space, we can only accommodate those guests formally invited and listed on the guest list page. Thank you for understanding!</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>Are kids invited?</dt>
+                    <dd>We love little ones, thus they are welcome to the wedding provided that they would not interrupt the proceedings/ceremony. Little activities would be provided to keep them entertained during the wedding reception.</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>Can I take photos during the ceremony?</dt>
+                    <dd>The only request we would like to make is to please put your phones and cameras away for the wedding ceremony. We are having an “Unplugged” Ceremony (no phones or cameras). We have hired professionals to capture this special moment for us. So please allow them to do their best work. AFTER the ceremony, please feel free to take as many photos and videos as you'd like.</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>What should I do if I have a dietary restriction?</dt>
+                    <dd>Please let us know in advance if you have any dietary restrictions. Alternatively, you can write down your dietary restrictions when you RSVP.</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>What time does the reception start?</dt>
+                    <dd>We aim to have the reception start at 1:00PM. If you arrive before then, you can use this time to sign the wedding guestbook, mingle and find your seats. Canapes will be available for all and the bar will be open for everyone to grab drinks.</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>When is the appropriate time to leave?</dt>
+                    <dd>We wish for everyone to stay until the end of the wedding reception. But if you wish to leave early, we’d love to personally thank you and to bid you goodbye before you go.</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>Why is RSVP so important?</dt>
+                    <dd>It is important for us to  know which guests would be able to attend so that we would able to get the final head count and to cater to the dietary requirements if any. Please <a href="/rsvp" transition:name="rsvp-transition">RSVP here</a> if you havent done so.</dd>
+                </div>
+                <div class="flex flex-col align justify-center gap-0">
+                    <dt>Do you have any gift preference?</dt>
+                    <dd>As love is what this day is all about, your presence is something we couldnt celebrate without. We are grateful for any gifts you would like to bring but please do not consider it mandatory. <br/>If you do decide to bring a gift, please bring it along to the reception where we will have a wishing well and gift table.</dd>
+                </div>
+            </dl>
+        </div>
     </main>
 </Layout>

@@ -1,5 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
-import { currentTrack, isPlaying } from './state';
+// import { currentTrack, isPlaying } from './state';
+
+export type Track = {
+  id: string
+  title: string
+  position: number
+  length: string
+}
+
+export type PlayerTrack = Track & {
+  albumId: string
+  artist: string
+  imageUrl: string
+}
 
 const PlayIcon = (
   <svg
@@ -38,6 +51,8 @@ const MAX_SONGS = 1
 const TRACK = {id: '1', title: 'Angel Baby', position: 1, length: '3:20', albumId: '1', artist: "Gigi Delana", imageUrl: "/vynil-lp.webp"};
 
 export default function Player() {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [currentTrack, setCurrentTrack] = useState<PlayerTrack | null>(null)
   const audioPlayer = useRef<HTMLAudioElement>(null)
   const progressRef = useRef<any>({current: 0})
   const [songIndex, setSongIndex] = useState(0)
@@ -57,9 +72,9 @@ export default function Player() {
   }
 
   function clickPlay() {
-    isPlaying.value = !isPlaying.value;
-    if(!currentTrack.value) {
-      currentTrack.value = TRACK;
+    setIsPlaying(!isPlaying);
+    if(!currentTrack) {
+      setCurrentTrack(TRACK);
     }
   }
 
@@ -68,24 +83,24 @@ export default function Player() {
     if(audioPlayer?.current) {
         audioPlayer.current.src = `/mp3/song${newIndex}.mp3`
         audioPlayer.current.currentTime = 0
-        audioPlayer.current.play()
+        // audioPlayer.current.play()
     }
     setSongIndex(newIndex)
-  }, [currentTrack?.value?.title])
+  }, [currentTrack?.title])
 
   useEffect(() => {
-    if (isPlaying.value) {
+    if (isPlaying) {
       audioPlayer.current?.play()
       progressRef.current = requestAnimationFrame(whilePlaying)
     } else {
       audioPlayer.current?.pause()
       cancelAnimationFrame(progressRef.current)
     }
-  }, [isPlaying.value])
+  }, [isPlaying])
 
   useEffect(() => {
     if (progress >= 99.99) {
-      isPlaying.value = false
+      setIsPlaying(false);
       setProgress(0)
     }
   }, [progress])
@@ -108,7 +123,7 @@ export default function Player() {
         <audio ref={audioPlayer} src="/mp3/song1.mp3" />
         <div className="flex gap-6 items-center text-black">
           <button onClick={clickPlay}>
-            {isPlaying.value ? PauseIcon : PlayIcon}
+            {isPlaying ? PauseIcon : PlayIcon}
           </button>
         </div>
       </div>

@@ -3,6 +3,12 @@ $lightgreen: #698c6d;
 $peach: #d4938b;
 $darkgreen: #024c3c;
 
+html {
+    font-family: 'eb garamond';
+    background: lighten($tan, 15%);
+    min-height: 100vh;
+}
+
 form {
     .form-text {
         max-width: 64ch;
@@ -92,5 +98,52 @@ form {
 
     dd {
         font-size: 16px;
+    }
+}
+
+nav {
+    background-color: lighten($tan, 15%);
+    border-bottom: 1px solid black;
+    
+    a {
+        text-wrap: nowrap;
+    }
+}
+
+.home-border {
+    width: 100%;
+    max-width: 800px;
+    border-bottom: 3px solid rgba($color: $darkgreen, $alpha: 1);
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wed-bg-tan {
+    background-color: lighten($tan, 15%);
+}
+
+nav.open {
+    ~main {
+        overflow-x: hidden;
+        transform: translateX(50%);
+    }
+
+    svg.open {
+        display: none;
+    }
+
+    svg.close {
+        display: block;
+    }
+}
+
+nav.closed {
+    svg.close {
+        display: none;
+    }
+    svg.open {
+        display: block;
     }
 }
