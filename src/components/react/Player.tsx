@@ -48,7 +48,7 @@ const PauseIcon = (
 // that we will play over and over as the user uses the app.
 const MAX_SONGS = 1
 
-const TRACK = {id: '1', title: 'Angel Baby', position: 1, length: '3:20', albumId: '1', artist: "Gigi Delana", imageUrl: "/vynil-lp.webp"};
+const TRACK = {id: '1', title: 'Angel Baby', position: 1, length: '5:09', albumId: '1', artist: "Gigi Delana", imageUrl: "/vynil-lp.webp"};
 
 export default function Player() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -81,7 +81,7 @@ export default function Player() {
   useEffect(() => {
     const newIndex = (songIndex % MAX_SONGS) + 1
     if(audioPlayer?.current) {
-        audioPlayer.current.src = `/mp3/song${newIndex}.mp3`
+        audioPlayer.current.src = `/mp3/angel-baby.mp3`
         audioPlayer.current.currentTime = 0
         // audioPlayer.current.play()
     }

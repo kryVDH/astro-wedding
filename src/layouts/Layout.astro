@@ -34,7 +34,7 @@ const backButtonVisible = Astro.url.pathname != '/';
 	</Nav>
 	<body class="overflow-hidden">
 		{backButtonVisible && <a onclick="history.back()" class="top-14 left-2 z-10 w-12 h-12 fixed">
-				<Icon name="mdi:chevron-left" class="h-full w-full text-white"></Icon>
+				<Icon name="mdi:chevron-left" class="h-full w-full text-black"></Icon>
 			</a>}
 		<slot />
 		<div id="audio-player">
