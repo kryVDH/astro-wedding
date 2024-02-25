@@ -28,7 +28,7 @@ const backButtonVisible = Astro.url.pathname != '/';
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<Nav client:load transition:persist="nav">
+	<Nav client:load>
 		<Icon name="mdi:menu" class="h-8 w-8 text-black open"></Icon>
 		<Icon name="mdi:close-box-outline" class="h-8 w-8 text-black close"></Icon>
 	</Nav>
