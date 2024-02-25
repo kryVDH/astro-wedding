@@ -9,7 +9,7 @@ const Nav = (props: any) => {
 
     return (
     <>
-        <nav className={"block lg:hidden w-full fixed top-0 z-30" + (isOpen ? " open" : " closed")} style={{boxShadow:  "0px 3px 6px #555"}}>
+        <nav className={"transition-all block lg:hidden w-full fixed top-0 z-30" + (isOpen ? " open" : " closed")} style={{boxShadow:  "0px 3px 6px #555"}}>
             <ul className="list-none flex flex-nowrap p-2 items-center gap-4 px-4">
                 <li><button className="relative h-10 w-10 z-50" onClick={toggleOpen}>
                     { props.children }
@@ -17,7 +17,7 @@ const Nav = (props: any) => {
                 <li className="font-dancing text-2xl text-black whitespace-nowrap"><a href="/">Kyle & Jasmine</a></li>
                 <li><a className="ml-auto" href="/rsvp">RSVP</a></li>
             </ul>
-            <div className={"h-screen w-full md:w-1/2 z-40 absolute top-0 left-0 wed-bg-tan" + (!isOpen ? " hidden" : " ")} style={{boxShadow:  "0px 3px 6px #555"}}>
+            <div className={"transition-all h-screen w-full md:w-1/2 z-40 absolute top-0 left-0 wed-bg-tan" + (!isOpen ? " -translate-x-full" : " ")} style={{boxShadow:  "0px 3px 6px #555"}}>
                 <ul className="list-none flex flex-col flex-nowrap p-2 items-center gap-4 px-4">
                     <li className="font-dancing text-2xl text-black whitespace-nowrap"><a href="/">Kyle & Jasmine</a></li>
                     <li><a href="/venue">VENUE</a></li>
