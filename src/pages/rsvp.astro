@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title='Venue'>
     <main class="min-h-screen mt-16">
         <h1 transition:name="rsvp-transition">RSVP</h1>
-        <form name="rsvp" class="mx-auto max-w-6xl flex flex-col gap-8 px-8 justify-center" action="/" method="POST" data-netlify="true" netlify>
+        <form name="rsvp" class="mx-auto max-w-6xl flex flex-col gap-8 px-8 justify-center pb-32" action="/" method="POST" data-netlify="true" netlify>
             <input type="hidden" name="form-name" value="rsvp">
             <div class="hidden border-green-800 border-2 border-solid bg-green-200 py-2 px-6 w-fit success-message" id="successMessage">Thank you! Your RSVP has been registered successfully</div>
             <div class="field">
