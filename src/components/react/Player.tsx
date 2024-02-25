@@ -120,7 +120,7 @@ export default function Player() {
             {artist}
           </p>
         </div>
-        <audio ref={audioPlayer} src="/mp3/song1.mp3" />
+        <audio ref={audioPlayer} src="/mp3/angel-baby.mp3" />
         <div className="flex gap-6 items-center text-black">
           <button onClick={clickPlay}>
             {isPlaying ? PauseIcon : PlayIcon}
