@@ -10,15 +10,15 @@ import clubeastwood from '../photos/clubeastwood.jpg';
 <Layout title="Kyle & Jasmine's Wedding.">
 	<main class="min-h-screen overflow-hidden">
 		<article class="w-full flex-col">
-			<Image class="w-full" width={1000} src={mainImage} loading={'eager'} alt="Kyle and Jasmine holding hands"></Image>
+			<Image class="w-full" width={1200} src={mainImage} loading={'eager'} alt="Kyle and Jasmine holding hands"></Image>
 			<div class="flex flex-col items-center pt-10 parallax relative" style={`background-image: url(${bgImage.src})`}>
 				<div class="h-full w-full opacity-60 absolute top-0 bg-white"></div>
 				<div class="bg-none z-10 min-h-screen w-full max-w-5xl mx-auto flex flex-col justify-center mb-16">
-					<Image class="mx-auto" width={300} src={logo} loading={'lazy'} alt="Kyle and Jasmine" style="box-shadow: inset 0px 0px 10px #555, 0px 0px 11px #555;"></Image>
+					<Image class="mx-auto rounded-lg" width={300} src={logo} loading={'lazy'} alt="Kyle and Jasmine" style="box-shadow: inset 0px 0px 10px #555, 0px 0px 11px #555;"></Image>
 					<h1 class="text-black mb-0 text-center"><span class="text-2xl">Invite you to their wedding on</span> <br/> July 12 2024</h1>
-					<div class="flex justify-center w-full mt-8 mb-4"><a href="/rsvp" class="mx-auto rounded-lg rsvp-btn text-2xl font-bold text-black">RSVP BY 10th May 2024</a></div>
+					<div class="flex justify-center w-full mt-8 mb-4"><a href="/rsvp" class="mx-auto rounded-2xl rsvp-btn text-2xl font-bold text-black">RSVP BY 10th May 2024</a></div>
 					<div class="home-border mt-8 mb-8"></div>
-					<h2 class="mb-0 text-center"><a href="/venue" class="underline" transition:name="venue-transition">Club Eastwood</a></h2>
+					<h2 class="mb-0 text-center"><a href="/venue" class="underline hover:no-underline" transition:name="venue-transition">Club Eastwood</a></h2>
 					<p class="text-xl mx-auto" transition:name="venue-address">117 Great Alpine Road, Bairnsdale</p>
 					<Image class="mx-auto border-black border-2 border-solid my-8" width={800} src={clubeastwood} loading={'lazy'} alt="Club Eastwood entrance" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
 					<div class="home-border mt-8 mb-8"></div>
