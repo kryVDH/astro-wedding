@@ -1,0 +1,30 @@
+<form name="rsvp" class="mx-auto max-w-6xl flex flex-col gap-8 px-8 justify-center" method="POST" data-netlify="true" netlify>
+    <input type="hidden" name="form-name" value="rsvp">
+
+    <div class="field">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-text" type="text" name="name" id="name">
+    </div>
+    <div class="field">
+        <label class="form-label" for="contact">Contact number</label>
+        <input class="form-text" type="tel" name="contact" id="contact">
+    </div>
+    <div class="field">
+        <label class="form-label" for="guests">Guests</label>
+        <textarea class="form-text" cols="3" name="guests" id="guests"></textarea>
+    </div>
+
+    <div class="field">
+        <label class="form-label" for="dietary">Dietary Restrictions</label>
+        <input class="form-text" type="text" name="dietary" id="dietary">
+    </div>
+
+    <div class="field">
+        <label class="form-label" for="comment">Comments</label>
+        <input class="form-text" type="text" name="comment" id="comment">
+    </div>
+
+    <div class="actions">
+        <button type="submit" class="submit">Submit</button>
+    </div>
+</form>
