@@ -12,7 +12,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 
 <Layout title='Hotels'>
     <main class="min-h-screen mt-12">
-        <div class="flex flex-col items-center pt-10 parallax relative" style={`background-image: url(${optimizedBackgroundImage.src})`}>
+        <div class="flex flex-col items-center pt-10 parallax relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
             <h1 class="mx-auto text-4xl text-center pl-8 z-10">NEARBY HOTELS</h1>
             <dl class="flex flex-col gap-6 justify-center faq mb-32 z-10">

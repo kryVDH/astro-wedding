@@ -11,7 +11,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 
 <Layout title='Program'>
     <main class="min-h-screen mt-12">
-        <div class="flex flex-col items-center pt-10 parallax pb-32 overflow-hidden relative" style={`background-image: url(${optimizedBackgroundImage.src})`}>
+        <div class="flex flex-col items-center pt-10 parallax pb-32 overflow-hidden relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
             <h1 class="mx-auto w-fit my-8 z-10">When and where?</h1>
             <div class="gap-44 grid grid-cols-1 sm:grid-cols-2 max-w-3xl md:mx-auto mx-5 z-10">
