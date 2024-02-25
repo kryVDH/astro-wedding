@@ -17,7 +17,7 @@ const Nav = (props: any) => {
                 <li className="font-dancing text-2xl text-black whitespace-nowrap"><a href="/">Kyle & Jasmine</a></li>
                 <li><a className="ml-auto" href="/rsvp">RSVP</a></li>
             </ul>
-            <div className={"h-screen w-1/2 z-40 absolute top-0 left-0 wed-bg-tan" + (!isOpen ? " hidden" : " ")} style={{boxShadow:  "0px 3px 6px #555"}}>
+            <div className={"h-screen w-full md:w-1/2 z-40 absolute top-0 left-0 wed-bg-tan" + (!isOpen ? " hidden" : " ")} style={{boxShadow:  "0px 3px 6px #555"}}>
                 <ul className="list-none flex flex-col flex-nowrap p-2 items-center gap-4 px-4">
                     <li className="font-dancing text-2xl text-black whitespace-nowrap"><a href="/">Kyle & Jasmine</a></li>
                     <li><a href="/venue">VENUE</a></li>
