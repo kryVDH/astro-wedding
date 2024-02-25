@@ -7,23 +7,35 @@ import Layout from '../layouts/Layout.astro';
         <h1 transition:name="rsvp-transition">RSVP</h1>
         <form name="rsvp" class="mx-auto max-w-6xl flex flex-col gap-8 px-8 justify-center" action="/" method="POST" data-netlify="true" netlify>
             <input type="hidden" name="form-name" value="rsvp">
-
+            <div class="hidden border-green-800 border-2 border-solid bg-green-200 py-2 px-6 w-fit success-message" id="successMessage">Thank you! Your RSVP has been registered successfully</div>
             <div class="field">
                 <label class="form-label" for="name">Name</label>
-                <input class="form-text" type="text" name="name" id="name">
+                <input class="form-text" type="text" name="name" id="name" required>
             </div>
             <div class="field">
-                <label class="form-label" for="contact">Contact number</label>
+                <label class="form-label" for="canYouAttend">Can you attend?</label>
+                <div class="form-radio">
+                    <input type="radio" name="canYouAttend" id="yes" value="Yes" required>
+                    <label for="yes">Yes, I'll be there</label>
+                </div>
+                <div class="form-radio mt-2">
+                    <input type="radio" name="canYouAttend" id="no" value="No" required>
+                    <label for="no">Sorry, I can't make it</label>
+                </div>
+            </div>
+            <div class="field">
+                <label class="form-label" for="contact">Contact details</label>
                 <input class="form-text" type="tel" name="contact" id="contact">
             </div>
             <div class="field">
-                <label class="form-label" for="guests">Guests</label>
-                <textarea class="form-text" cols="3" name="guests" id="guests"></textarea>
+                <label class="form-label" for="guests">Please list the names of the people you are responding for. 
+                    <span class="block text-sm sub-label">NOTE: Due to limited space, we can only accommodate those guests formally invited and listed on the guest list page. Thank you for understanding!</span></label>
+                <textarea class="form-text" cols="3" name="guests" id="guests" required></textarea>
             </div>
 
             <div class="field">
-                <label class="form-label" for="dietary">Dietary Restrictions</label>
-                <input class="form-text" type="text" name="dietary" id="dietary">
+                <label class="form-label" for="dietary">If you have any dietary requirements, please list them here. Type N/A if you have none.</label>
+                <input class="form-text" type="text" name="dietary" id="dietary" required>
             </div>
 
             <div class="field">
@@ -43,12 +55,14 @@ import Layout from '../layouts/Layout.astro';
             const myForm = event.target;
             const formData = new FormData(myForm);
             
-            fetch("/", {
+            fetch("/rsvp-form.html", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString(),
             })
-                .then(() => console.log("Form successfully submitted"))
+                .then(() => {
+                    document.getElementById('successMessage')?.classList.remove('hidden')
+                })
                 .catch((error) => alert(error));
         };
 
