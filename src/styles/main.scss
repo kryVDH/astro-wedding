@@ -159,8 +159,8 @@ nav.closed {
 .rsvp-btn {
     font-family: 'Lato';
     border-color: $darkgreen;
-    border: 3px solid;
-    background-color: lighten($lightgreen, 20%);
+    border: 2px solid;
+    background-color: lighten($lightgreen, 40%);
     padding: 8px 48px;
     transition: 100ms;
     box-shadow: 2px 2px 5px #555;
@@ -169,14 +169,23 @@ nav.closed {
         text-decoration: underline;
         box-shadow: 3px 3px 6px #555;
     }
+
+    &.rsvp-btn-small {
+        background-color: lighten($tan, 0%);
+        padding: 6px 16px;
+    }
 }
 
 
 blockquote {
     font-family: 'Playfair Display';
     font-weight: 500;
-    padding: 40px 80px 40px;
+    padding: 40px 40px 40px;
     position: relative;
+
+    @media (min-width: 640px) {
+        padding: 40px 80px 40px;
+    }
 }
 blockquote p {
     font-family: "Utopia-italic";
@@ -197,4 +206,9 @@ blockquote p {
 
 .little-box-shadow {
     box-shadow: 5px 5px 10px 1px #555;
+}
+
+.heading-link {
+    color: darken($darkgreen, 0%);
+    border-color:   darken($darkgreen, 0%);
 }

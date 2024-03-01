@@ -1,24 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import mainImage from '../photos/main-3.jpg';
-import bgImage from '../photos/main-bg-cropped.jpg';
 import logo from '../photos/logo.png';
 import clubeastwood from '../photos/clubeastwood.jpg';
+import bgImage from '../photos/hands.jpg'
+
+const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 ---
 
 <Layout title="Kyle & Jasmine's Wedding.">
-	<main class="min-h-screen overflow-hidden">
+	<main class="min-h-screen">
 		<article class="w-full flex-col">
 			<Image class="w-full" width={1200} src={mainImage} loading={'eager'} alt="Kyle and Jasmine holding hands"></Image>
-			<div class="flex flex-col items-center pt-10 parallax relative pb-32 px-4" style={`background-image: url(${bgImage.src})`}>
-				<div class="h-full w-full opacity-60 absolute top-0 bg-white"></div>
+			<div class="flex flex-col items-center pt-10 parallax relative pb-32 px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
+				<div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
 				<div class="bg-none z-10 min-h-screen w-full max-w-5xl mx-auto flex flex-col justify-center mb-16">
 					<Image class="mx-auto rounded-lg" width={300} src={logo} loading={'lazy'} alt="Kyle and Jasmine" style="box-shadow: inset 0px 0px 10px #555, 0px 0px 11px #555;"></Image>
 					<h1 class="text-black mb-0 text-center"><span class="text-2xl">Invite you to their wedding on</span> <br/> July 12 2024</h1>
-					<div class="flex justify-center w-full mt-8 mb-4"><a href="/rsvp" class="mx-auto rounded-2xl rsvp-btn text-2xl font-bold text-black">RSVP BY 10th May 2024</a></div>
+					<div class="flex justify-center w-full mt-8 mb-4 sticky top-16 z-20"><a href="/rsvp" class="mx-auto rounded-lg rsvp-btn text-xl sm:text-2xl font-bold text-black">RSVP BY 10th May 2024</a></div>
 					<div class="home-border mt-8 mb-8"></div>
-					<h2 class="mb-0 text-center"><a href="/venue" class="underline hover:no-underline" transition:name="venue-transition">Club Eastwood</a></h2>
+					<h2 class="mb-0 text-center flex justify-center"><a href="/venue" class="hover:border-0 hover:no-underline heading-link border-b-2 transition-none block w-fit hover:mb-0.5" transition:name="venue-transition">Club Eastwood</a></h2>
 					<p class="text-xl mx-auto" transition:name="venue-address">117 Great Alpine Road, Bairnsdale</p>
 					<Image class="mx-auto border-black border-2 border-solid my-8" width={800} src={clubeastwood} loading={'lazy'} alt="Club Eastwood entrance" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
 					<div class="home-border mt-8 mb-8"></div>
@@ -26,7 +28,7 @@ import clubeastwood from '../photos/clubeastwood.jpg';
 					<blockquote>We are so excited to share this day with all of you. We hope you'll join us on the 12th of July to celebrate our  big day! If you have questions, we might have answers on our FAQS page, if not please don't hesitate to message the couple</blockquote>
 					<div class="home-border mt-8 mb-8"></div>
 					<h2 class="mb-4 text-center">Info for the wedding</h2>
-					<p class="px-20 font-semibold">The ceremony is to be held in our backyard with no cover (except in the event of rain). Reception will be indoors with assigned seats and the bar will be open for drink orders. Dress code will be semi-formal and we ask that you please try to incorporate the below colour palette.</p>
+					<p class="px-8 sm:px-20 font-semibold">The ceremony is to be held in our backyard with no cover (except in the event of rain). Reception will be indoors with assigned seats and the bar will be open for drink orders. Dress code will be semi-formal and we ask that you please try to incorporate the below colour palette.</p>
 					<div class="colour-palette mx-auto flex items-center gap-4 my-4">
 						<div class="w-full flex justify-center items-center">
 							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #D7BB98;"></div>
@@ -43,7 +45,7 @@ import clubeastwood from '../photos/clubeastwood.jpg';
 					</div>
 					<div class="home-border mt-8 mb-8"></div>
 					<h2 class="mb-4 text-center">Hotels</h2>
-					<p class="px-20 font-semibold">There are several hotels and inns in the area if you wish to stay in Bairnsdale over the weekend/ overnight. <a class="underline" href="/hotels">Here</a> are the list of hotels and inns</p>
+					<p class="px-8 sm:px-20 font-semibold">There are several hotels and inns in the area if you wish to stay in Bairnsdale over the weekend/ overnight. <a class="underline" href="/hotels">Here</a> are the list of hotels and inns</p>
 				</div>
 			</div>
 		</article>
