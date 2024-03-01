@@ -15,7 +15,7 @@ const Nav = (props: any) => {
                     { props.children }
                 </button></li>
                 <li className="font-dancing text-2xl text-black whitespace-nowrap"><a href="/">Kyle & Jasmine</a></li>
-                <li><a className="ml-auto" href="/rsvp">RSVP</a></li>
+                {props.backButtonVisible && <li className="ml-auto"><a className="ml-auto rounded-lg rsvp-btn font-bold text-black rsvp-btn-small" href="/rsvp">RSVP</a></li>}
             </ul>
             <div className={"transition-all h-screen w-full md:w-1/2 z-40 absolute top-0 left-0 wed-bg-tan" + (!isOpen ? " -translate-x-full" : " ")} style={{boxShadow:  "0px 3px 6px #555"}}>
                 <ul className="list-none flex flex-col flex-nowrap p-2 items-center gap-4 px-4">

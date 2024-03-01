@@ -29,12 +29,12 @@ const backButtonVisible = Astro.url.pathname != '/';
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<Nav client:load>
+	<Nav backButtonVisible={backButtonVisible} client:load>
 		<Icon name="mdi:menu" class="h-8 w-8 text-black open"></Icon>
 		<Icon name="mdi:close-box-outline" class="h-8 w-8 text-black close"></Icon>
 	</Nav>
 	<body class="overflow-hidden">
-		{backButtonVisible && <a onclick="history.back()" class="top-14 left-2 z-10 w-12 h-12 fixed">
+		{backButtonVisible && <a onclick="history.back()" class="top-14 left-2 z-50 w-12 h-12 fixed">
 				<Icon name="mdi:chevron-left" class="h-full w-full text-black"></Icon>
 			</a>}
 		<slot />
