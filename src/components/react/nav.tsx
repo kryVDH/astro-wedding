@@ -24,6 +24,7 @@ const Nav = (props: any) => {
                     <li><a href="/venue">VENUE</a></li>
                     <li><a href="/program">PROGRAM</a></li>
                     <li><a href="/hotels">HOTELS</a></li>
+                    <li><a href="/guestlist">GUEST LIST</a></li>
                     <li><a href="/faq">FAQ</a></li>
                 </ul>
             </div>
@@ -35,6 +36,7 @@ const Nav = (props: any) => {
                 <li><a href="/venue">VENUE</a></li>
                 <li><a href="/program">PROGRAM</a></li>
                 <li><a href="/hotels">HOTELS</a></li>
+                <li><a href="/guestlist">GUEST LIST</a></li>
                 <li><a href="/faq">FAQ</a></li>
             </ul>
         </nav>
