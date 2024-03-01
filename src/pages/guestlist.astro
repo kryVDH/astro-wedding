@@ -1,11 +1,18 @@
 ---
+import { getImage, Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import bgImage from '../photos/hands.jpg'
+
+const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 ---
 
 <Layout title="Guest List">
     <main class="min-h-screen mt-12 pt-4">
-        <h1 transition:name="guestlist-transition">Guest List</h1>
-        <dl class="flex  justify-center items-center flex-col gap-8" >
+        <div class="flex flex-col items-center pt-10 parallax relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
+            <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
+            <h1 transition:name="guestlist-transition">Guest List</h1>
+        </div>
+        <!-- <dl class="flex  justify-center items-center flex-col gap-8" >
             <div class="mb-1">
                 <h2 class="mb-1 text-4xl">Bridesmaids</h2>
                 <ul class="flex flex-col justify-center items-center gap-1">
@@ -43,6 +50,6 @@ import Layout from '../layouts/Layout.astro';
                 </ul>
             </div>
 
-        </dl>
+        </dl> -->
     </main>
 </Layout>
