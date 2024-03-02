@@ -179,6 +179,7 @@ nav.closed {
     border-color: $darkgreen;
     border: 2px solid;
     background-color: lighten($lightgreen, 40%);
+    // background-color: lighten($tan, 0%);
     padding: 8px 48px;
     transition: 100ms;
     box-shadow: 2px 2px 5px #555;
@@ -191,6 +192,10 @@ nav.closed {
     &.rsvp-btn-small {
         background-color: lighten($tan, 0%);
         padding: 6px 16px;
+    }
+
+    &.rsvp-btn-tan {
+        background-color: lighten(tan, 0%);
     }
 }
 
@@ -232,7 +237,7 @@ blockquote p {
 }
 
 h1 {
-    font-family: 'Playfair Display';
+    font-family: 'WindSong';
     font-size: 3rem;
     font-weight: 400;
     line-height: 1;
@@ -246,4 +251,39 @@ h2 {
     font-weight: 500;
     line-height: 1;
     margin-bottom: 1em;
+}
+
+
+.timeline::before {
+    background: black;
+    display: block;
+    transition: all 0.5s;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    bottom: 0;
+    width: 2px;
+}
+
+.timeline::after {
+    display: block;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 0px;
+    left: -14px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    background: white;
+}
+
+.timeline {
+    position: relative;
+    padding-top: -10px;
+
+    :first-child {
+        margin-top: -10px;
+    }
 }

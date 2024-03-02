@@ -14,17 +14,17 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
     <main class="min-h-screen mt-12">
         <div class="flex flex-col items-center pt-10 parallax pb-32 overflow-hidden relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
-            <h1 class="mx-auto w-fit my-8 z-10">When and where?</h1>
-            <div class="gap-44 grid grid-cols-1 sm:grid-cols-2 max-w-3xl md:mx-auto mx-5 z-10" transition:name="program-t">
-                <div class="border-b-black border-b-2">
-                    <h3 class="mx-auto w-fit text-3xl italic">Ceremony</h3>
-                    <p class="text-lg font-bold">15 Shannon Boulevard</p>
-                    <p class="text-lg">11:30AM</p>
+            <h1 class="mx-auto w-fit my-8 z-10">Program and Menu</h1>
+            <div class="timeline-group flex flex-col max-w-2xl mx-auto justify-start" transition:name="program-t">
+                <div class="timeline w-full flex flex-col justify-start gap-4 pb-8">
+                    <p class="text-xl">11:30AM</p>
+                    <h3 class="text-5xl my-4" style="font-family: 'WindSong';" >Ceremony</h3>
+                    <p class="text-xl font-bold">15 Shannon Boulevard</p>
                 </div>
-                <div class="border-b-black border-b-2">
-                    <h3 class="mx-auto w-fit text-3xl italic">Reception</h3>
-                    <p class="text-lg font-bold">Club Eastwood</p>
-                    <p class="text-lg">12:30PM</p>
+                <div class="timeline w-full flex flex-col justify-start gap-4 pb-8">
+                    <p class="text-xl">12:30PM</p>
+                    <h3 class="text-5xl my-4" style="font-family: 'WindSong';" >Reception</h3>
+                    <p class="text-xl font-bold"><a href="/venue" class="hover:border-0 hover:no-underline heading-link border-b-2 transition-none block w-fit hover:mb-0.5" transition:name="venue-transition">Club Eastwood</a></p>
                 </div>
             </div>
             <Image class="z-10 border-black border-2 border-solid mt-8" width={700} src={program} loading={'eager'} alt="Program" style="box-shadow: 4px 4px 10px 4px #555;"></Image>

@@ -10,7 +10,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 ---
 
 <Layout title="Guest List">
-    <main class="min-h-screen pt-4">
+    <main class="min-h-screen pt-4 mt-12">
         <div class="flex flex-col items-center pt-10 parallax relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
             <h1 transition:name="guestlist-transition" class="z-10">Guest List</h1>

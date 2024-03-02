@@ -11,10 +11,10 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 ---
 
 <Layout title='Hotels'>
-    <main class="min-h-screen mt-12">
-        <div class="flex flex-col items-center pt-10 parallax relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
+    <main class="min-h-screen mt-14">
+        <div class="flex flex-col items-center pt-12 parallax relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
-            <h1 class="mx-auto text-4xl text-center z-10" style="font-family: 'WindSong';" transition:name="hotels-transition">HOTELS</h1>
+            <h1 class="mx-auto text-center z-10" style="font-family: 'WindSong';" transition:name="hotels-transition">Hotels</h1>
             <dl class="flex flex-col gap-6 justify-center faq mb-32 z-10">
                 <div class="flex flex-col align justify-center">
                     <dt>The Grand Terminus Hotel</dt>

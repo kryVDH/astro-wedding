@@ -3,9 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import { Image, getImage } from 'astro:assets';
 import mainImage from '../photos/main-3.jpg';
 import logo from '../photos/logo.png';
-import clubeastwood from '../photos/clubeastwood.jpg';
 import bgImage from '../photos/hands.jpg';
-import functionroom from '../photos/functionroom.jpg';
+
 
 const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 ---
@@ -18,14 +17,26 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 				<div class="h-full w-full opacity-95 absolute top-0 bg-white"></div>
 				<div class="bg-none z-10 min-h-screen w-full max-w-5xl mx-auto flex flex-col justify-center mb-16">
 					<Image class="mx-auto rounded-lg" width={300} src={logo} loading={'lazy'} alt="Kyle and Jasmine" style="box-shadow: inset 0px 0px 10px #555, 0px 0px 11px #555;"></Image>
-					<h1 class="text-black mb-0 text-center px-4"><span class="text-2xl">Invite you to their wedding on</span> <br/> July 12 2024</h1>
+					<h1 class="text-black mb-0 text-center px-4" style="font-family: 'Playfair Display';"><span class="text-2xl">Invite you to their wedding on</span> <br/> July 12 2024</h1>
 					<div class="flex justify-center w-full mt-8 mb-4 sticky top-16 z-20 px-4">
 						<a href="/rsvp" class="mx-auto rounded-lg rsvp-btn text-xl sm:text-2xl font-bold text-black"><span class="contents" transition:name="rsvp-transition">RSVP</span> BY 10th May 2024</a>
 					</div>
 
 					<div class="home-border mt-8 mb-8"></div>
 
-					<div class="gap-44 grid grid-cols-1 sm:grid-cols-2 max-w-3xl md:mx-auto mx-5 z-10" transition:name="program-t">
+					<div class="timeline-group flex flex-col max-w-2xl mx-auto justify-start" transition:name="program-t">
+						<div class="timeline w-full flex flex-col justify-start gap-4 pb-8">
+							<p class="text-xl">11:30AM</p>
+							<h3 class="text-5xl my-4" style="font-family: 'WindSong';" >Ceremony</h3>
+							<p class="text-xl font-bold">15 Shannon Boulevard</p>
+						</div>
+						<div class="timeline w-full flex flex-col justify-start gap-4 pb-8">
+							<p class="text-xl">12:30PM</p>
+							<h3 class="text-5xl my-4" style="font-family: 'WindSong';" >Reception</h3>
+							<p class="text-xl font-bold"><a href="/venue" class="hover:border-0 hover:no-underline heading-link border-b-2 transition-none block w-fit hover:mb-0.5" transition:name="venue-transition">Club Eastwood</a></p>
+						</div>
+					</div>
+					<!-- <div class="gap-44 grid grid-cols-1 sm:grid-cols-2 max-w-3xl md:mx-auto mx-5 z-10" transition:name="program-t">
 						<div class="border-b-black border-b-2">
 							<h3 class="mx-auto w-fit text-3xl italic mb-2">Ceremony</h3>
 							<p class="text-lg font-bold">15 Shannon Boulevard</p>
@@ -36,17 +47,12 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 							<p class="text-lg font-bold">Club Eastwood</p>
 							<p class="text-lg">12:30PM</p>
 						</div>
-					</div>
-
-					<p class="text-base uppercase leading-6 font-bold mx-auto px-4 mt-4"><a class="underline hover:no-underline" href="/program">Click here</a> for a detailed program and menu</p>
+					</div> -->
+					<a class="mx-auto mt-4 rounded-lg rsvp-btn font-bold text-black rsvp-btn-tan" href="/program">View detailed program and menu</a>
+					<!-- <p class="text-base uppercase leading-6 font-bold mx-auto px-4 mt-4"><a class="underline hover:no-underline" href="/program">Click here</a> for a detailed program and menu</p> -->
 
 					<div class="home-border mt-8 mb-8"></div>
 
-					<h2 class="mb-0 text-center flex justify-center px-4"><a href="/venue" class="hover:border-0 hover:no-underline heading-link border-b-2 transition-none block w-fit hover:mb-0.5" transition:name="venue-transition">Club Eastwood</a></h2>
-					<p class="text-base uppercase leading-6 font-bold mx-auto px-4" transition:name="venue-address">117 Great Alpine Road, Bairnsdale</p>
-					<Image class="mx-auto my-8" width={600} src={clubeastwood} loading={'lazy'} alt="Club Eastwood entrance"></Image>
-					<Image class="mx-auto my-8" width={600} src={functionroom} loading={'lazy'} alt="Club Eastwood entrance"></Image>
-					<div class="home-border mt-8 mb-8"></div>
 					<h2 class="mb-0 text-center px-4">Our Message</h2>
 					<blockquote class="text-center mx-auto font-semibold uppercase text-base leading-9 max-w-prose" style="max-width: 80ch"	>We are so excited to share this day with all of you. We hope you'll join us on the 12th of July to celebrate our  big day! If you have questions, we might have answers on our FAQS page, if not please don't hesitate to message the couple.</blockquote>
 					<div class="home-border mt-8 mb-8"></div>
@@ -68,7 +74,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 					</div>
 					<div class="home-border mt-8 mb-8"></div>
 					<h2 class="mb-4 text-center px-4" transition:name="hotels-transition">Hotels</h2>
-					<p class="px-8 sm:px-20 font-semibold text-center uppercase text-base mx-auto leading-9">There are several hotels and inns in the area if you wish to stay in Bairnsdale over the weekend or overnight. <a class="underline" href="/hotels">Here</a> is the list of hotels and inns.</p>
+					<p class="px-8 sm:px-20 font-semibold text-center uppercase text-base mx-auto leading-9">There are several hotels and inns in the area if you wish to stay in Bairnsdale over the weekend or overnight. <a class="underline" href="/hotels">Here</a> we have put together a list of some of them.</p>
 				</div>
 			</div>
 		</article>
