@@ -8,8 +8,6 @@ const Nav = (props: any) => {
         setIsOpen(!isOpen);
     }
 
-    console.log(props);
-
     return (
     <>
         <nav className={"transition-all block lg:hidden w-full fixed top-0 z-30" + (isOpen ? " open" : " closed")} style={{boxShadow:  "0px 3px 6px #555"}}>
@@ -38,13 +36,13 @@ const Nav = (props: any) => {
         </nav>
         <nav className="hidden lg:block w-full fixed top-0 z-50">
             <ul className="list-none flex flex-nowrap p-2 items-center gap-4 px-4">
-                <li className="self-start font-dancing text-2xl text-black whitespace-nowrap"><a href="/">Kyle & Jasmine</a></li>
-                <li className="ml-auto"><a href="/rsvp">RSVP</a></li>
-                <li><a href="/venue">VENUE</a></li>
+                <li className="self-start font-dancing text-2xl text-black whitespace-nowrap"><a className="flex items-center gap-2" href="/"><img src={logo.src} width={30}></img> Kyle & Jasmine</a></li>
+                <li className="ml-auto"><a href="/venue">VENUE</a></li>
                 <li><a href="/program">PROGRAM</a></li>
                 <li><a href="/hotels">HOTELS</a></li>
                 <li><a href="/guestlist">GUEST LIST</a></li>
                 <li><a href="/faq">FAQ</a></li>
+                <li><a className="ml-auto rounded-lg rsvp-btn font-bold text-black rsvp-btn-small" href="/rsvp">RSVP</a></li>
             </ul>
         </nav>
     </>)

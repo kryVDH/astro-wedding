@@ -6,7 +6,7 @@ $darkgreen: #024c3c;
 html {
     // font-family: 'eb garamond';
     font-family: 'Playfair Display';
-    background: lighten($tan, 15%);
+    background: lighten($tan, 25%);
     min-height: 100vh;
 }
 
@@ -26,7 +26,8 @@ form {
     }
 
     label {
-        color: #024C3C;
+        // color: darken(#024C3C, 5%);
+        color: black;
         font-weight: 600;
         font-family: 'roboto';
         max-width: 64ch;
@@ -36,9 +37,26 @@ form {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        width: 100%;
+        max-width: 64ch;
+    }
+
+    .required-label:after {
+        content: '*';
+        color: red;
+        position: absolute;
+        right: -10px;
+    }
+
+    label, span {
+        width: fit-content;
+        position: relative;
     }
     
     .actions {
+        button {
+            padding: 8px 48px !important;
+        }
         .submit {
             font-family: 'Roboto';
             border-radius: 10px;
@@ -47,7 +65,7 @@ form {
             min-height: 44px;
             min-width: 10ch;
             padding: 8px 8px;
-            color: #024C3C;
+            color: black;
             font-weight: bold;
 
             &:hover, &:focus {

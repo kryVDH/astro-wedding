@@ -4,7 +4,8 @@ import { Image, getImage } from 'astro:assets';
 import mainImage from '../photos/main-3.jpg';
 import logo from '../photos/logo.png';
 import clubeastwood from '../photos/clubeastwood.jpg';
-import bgImage from '../photos/hands.jpg'
+import bgImage from '../photos/hands.jpg';
+import functionroom from '../photos/functionroom.jpg';
 
 const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 ---
@@ -21,16 +22,36 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 					<div class="flex justify-center w-full mt-8 mb-4 sticky top-16 z-20 px-4">
 						<a href="/rsvp" class="mx-auto rounded-lg rsvp-btn text-xl sm:text-2xl font-bold text-black"><span class="contents" transition:name="rsvp-transition">RSVP</span> BY 10th May 2024</a>
 					</div>
+
 					<div class="home-border mt-8 mb-8"></div>
+
+					<div class="gap-44 grid grid-cols-1 sm:grid-cols-2 max-w-3xl md:mx-auto mx-5 z-10" transition:name="program-t">
+						<div class="border-b-black border-b-2">
+							<h3 class="mx-auto w-fit text-3xl italic mb-2">Ceremony</h3>
+							<p class="text-lg font-bold">15 Shannon Boulevard</p>
+							<p class="text-lg">11:30AM</p>
+						</div>
+						<div class="border-b-black border-b-2">
+							<h3 class="mx-auto w-fit text-3xl italic mb-2">Reception</h3>
+							<p class="text-lg font-bold">Club Eastwood</p>
+							<p class="text-lg">12:30PM</p>
+						</div>
+					</div>
+
+					<p class="text-base uppercase leading-6 font-bold mx-auto px-4 mt-4"><a class="underline hover:no-underline" href="/program">Click here</a> for a detailed program and menu</p>
+
+					<div class="home-border mt-8 mb-8"></div>
+
 					<h2 class="mb-0 text-center flex justify-center px-4"><a href="/venue" class="hover:border-0 hover:no-underline heading-link border-b-2 transition-none block w-fit hover:mb-0.5" transition:name="venue-transition">Club Eastwood</a></h2>
 					<p class="text-base uppercase leading-6 font-bold mx-auto px-4" transition:name="venue-address">117 Great Alpine Road, Bairnsdale</p>
-					<Image class="mx-auto my-8" width={800} src={clubeastwood} loading={'lazy'} alt="Club Eastwood entrance"></Image>
+					<Image class="mx-auto my-8" width={600} src={clubeastwood} loading={'lazy'} alt="Club Eastwood entrance"></Image>
+					<Image class="mx-auto my-8" width={600} src={functionroom} loading={'lazy'} alt="Club Eastwood entrance"></Image>
 					<div class="home-border mt-8 mb-8"></div>
 					<h2 class="mb-0 text-center px-4">Our Message</h2>
 					<blockquote class="text-center mx-auto font-semibold uppercase text-base leading-9 max-w-prose" style="max-width: 80ch"	>We are so excited to share this day with all of you. We hope you'll join us on the 12th of July to celebrate our  big day! If you have questions, we might have answers on our FAQS page, if not please don't hesitate to message the couple.</blockquote>
 					<div class="home-border mt-8 mb-8"></div>
 					<h2 class="mb-4 text-center px-4">Info for the wedding</h2>
-					<p class="px-8 sm:px-20 font-semibold text-center uppercase text-base mx-auto leading-9" style="max-width: 80ch">The ceremony is to be held in our backyard with no cover (except in the event of rain). Reception will be indoors with assigned seats and the bar will be open for drink orders. Dress code will be semi-formal and we ask that you please try to incorporate the below colour palette.</p>
+					<p class="px-8 sm:px-20 font-semibold text-center uppercase text-base mx-auto leading-9" style="max-width: 80ch">The ceremony is to be held in our backyard with no cover (except in the event of rain). Reception will be indoors with assigned seats and the bar will be open for drink orders. Dress code will be semi-formal and we ask that you please dress to the below colour palette.</p>
 					<div class="colour-palette mx-auto flex items-center gap-4 my-4">
 						<div class="w-full flex justify-center items-center">
 							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #D7BB98;"></div>
@@ -47,7 +68,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 					</div>
 					<div class="home-border mt-8 mb-8"></div>
 					<h2 class="mb-4 text-center px-4" transition:name="hotels-transition">Hotels</h2>
-					<p class="px-8 sm:px-20 font-semibold text-center uppercase text-base mx-auto leading-9">There are several hotels and inns in the area if you wish to stay in Bairnsdale over the weekend or overnight. <a class="underline" href="/hotels">Here</a> are the list of hotels and inns.</p>
+					<p class="px-8 sm:px-20 font-semibold text-center uppercase text-base mx-auto leading-9">There are several hotels and inns in the area if you wish to stay in Bairnsdale over the weekend or overnight. <a class="underline" href="/hotels">Here</a> is the list of hotels and inns.</p>
 				</div>
 			</div>
 		</article>
