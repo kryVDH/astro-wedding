@@ -13,16 +13,16 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 	<main class="min-h-screen">
 		<article class="w-full flex-col">
 			<Image class="w-full max-h-screen object-cover" style="object-position: 0% 25%" width={1200} src={mainImage} loading={'eager'} alt="Kyle and Jasmine holding hands"></Image>
-			<div class="flex flex-col items-center pt-10 parallax relative pb-32" style={`background-image: url(${optimizedBackgroundImage.src})`}>
+			<div class="flex flex-col items-center pt-10 parallax relative pb-8" style={`background-image: url(${optimizedBackgroundImage.src})`}>
 				<div class="h-full w-full opacity-95 absolute top-0 bg-white"></div>
 				<div class="bg-none z-10 min-h-screen w-full max-w-5xl mx-auto flex flex-col justify-center mb-16">
 					<Image class="mx-auto rounded-lg" width={300} src={logo} loading={'lazy'} alt="Kyle and Jasmine" style="box-shadow: inset 0px 0px 10px #555, 0px 0px 11px #555;"></Image>
-					<h1 class="text-black mb-0 text-center px-4" style="font-family: 'Playfair Display';"><span class="text-2xl">Invite you to their wedding on</span> <br/> July 12 2024</h1>
-					<div class="flex justify-center w-full mt-8 mb-4 sticky top-16 z-20 px-4">
+					<h1 class="text-black mb-0 text-center px-4" style="font-family: 'Playfair Display';"><span class="text-2xl leading-loose">Invite you to their wedding on</span> <br/> July 12 2024</h1>
+					<div class="flex justify-center w-full mt-16 mb-4 sticky top-16 z-20 px-4">
 						<a href="/rsvp" class="mx-auto rounded-lg rsvp-btn text-xl sm:text-2xl font-bold text-black"><span class="contents" transition:name="rsvp-transition">RSVP</span> BY 10th May 2024</a>
 					</div>
 
-					<div class="home-border mt-8 mb-8"></div>
+					<div class="home-border mt-16 mb-20"></div>
 
 					<div class="timeline-group flex flex-col max-w-2xl mx-auto justify-start" transition:name="program-t">
 						<div class="timeline w-full flex flex-col justify-start gap-4 pb-8">
@@ -48,14 +48,14 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 							<p class="text-lg">12:30PM</p>
 						</div>
 					</div> -->
-					<a class="mx-auto mt-4 rounded-lg rsvp-btn font-bold text-black rsvp-btn-tan" href="/program">View detailed program and menu</a>
+					<a class="mx-auto mt-8 rounded-md rsvp-btn font-bold text-black rsvp-btn-small text-sm program-btn" href="/program">View detailed program and menu</a>
 					<!-- <p class="text-base uppercase leading-6 font-bold mx-auto px-4 mt-4"><a class="underline hover:no-underline" href="/program">Click here</a> for a detailed program and menu</p> -->
 
-					<div class="home-border mt-8 mb-8"></div>
+					<div class="home-border mt-20 mb-20"></div>
 
-					<h2 class="mb-0 text-center px-4">Our Message</h2>
+					<h2 class="mb-8 text-center px-4">Our Message</h2>
 					<blockquote class="text-center mx-auto font-semibold uppercase text-base leading-9 max-w-prose" style="max-width: 80ch"	>We are so excited to share this day with all of you. We hope you'll join us on the 12th of July to celebrate our  big day! If you have questions, we might have answers on our FAQS page, if not please don't hesitate to message the couple.</blockquote>
-					<div class="home-border mt-8 mb-8"></div>
+					<div class="home-border mt-12 mb-20"></div>
 					<h2 class="mb-4 text-center px-4">Info for the wedding</h2>
 					<p class="px-8 sm:px-20 font-semibold text-center uppercase text-base mx-auto leading-9" style="max-width: 80ch">The ceremony is to be held in our backyard with no cover (except in the event of rain). Reception will be indoors with assigned seats and the bar will be open for drink orders. Dress code will be semi-formal and we ask that you please dress to the below colour palette.</p>
 					<div class="colour-palette mx-auto flex items-center gap-4 my-4">
@@ -72,9 +72,10 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
 							<div class="little-box-shadow rounded-full border-solid border-2 w-16 aspect-square border-black" style="background-color: #024c3c;"></div>
 						</div>
 					</div>
-					<div class="home-border mt-8 mb-8"></div>
+					<div class="home-border mt-20 mb-20"></div>
 					<h2 class="mb-4 text-center px-4" transition:name="hotels-transition">Hotels</h2>
 					<p class="px-8 sm:px-20 font-semibold text-center uppercase text-base mx-auto leading-9">There are several hotels and inns in the area if you wish to stay in Bairnsdale over the weekend or overnight. <a class="underline" href="/hotels">Here</a> we have put together a list of some of them.</p>
+					<div class="home-border mt-20"></div>
 				</div>
 			</div>
 		</article>

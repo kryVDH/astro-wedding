@@ -194,8 +194,9 @@ nav.closed {
         padding: 6px 16px;
     }
 
-    &.rsvp-btn-tan {
-        background-color: lighten(tan, 0%);
+    &.program-btn {
+        padding: 4px 10px;
+        background-color: lighten($tan, 20%);
     }
 }
 
