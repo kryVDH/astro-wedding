@@ -21,16 +21,16 @@ const Nav = (props: any) => {
                 <li className="ml-auto"><a className="ml-auto rounded-lg rsvp-btn font-bold text-black rsvp-btn-small" href="/rsvp">RSVP</a></li> 
             </ul>
             <div className={"transition-all h-screen w-full md:w-1/2 z-40 absolute top-0 left-0 wed-bg-tan" + (!isOpen ? " -translate-x-full" : " ")} style={{boxShadow:  "0px 3px 6px #555"}}>
-                <ul className="list-none flex flex-col flex-nowrap p-2 items-center gap-2 px-4">
+                <ul className="list-none flex flex-col flex-nowrap p-2 items-center gap-3 px-4">
                     <li className="font-dancing text-2xl text-black whitespace-nowrap">  
                         <a className="flex items-center gap-2" href="/"><img src={logo.src} width={30}></img> Kyle & Jasmine</a>
                     </li>
-                    <li><a href="/rsvp">RSVP</a></li>
-                    <li><a href="/venue">VENUE</a></li>
-                    <li><a href="/program">PROGRAM</a></li>
-                    <li><a href="/hotels">HOTELS</a></li>
-                    <li><a href="/guestlist">GUEST LIST</a></li>
-                    <li><a href="/faq">FAQ</a></li>
+                    <li className="text-xl"><a href="/rsvp">RSVP</a></li>
+                    <li className="text-xl"><a href="/venue">VENUE</a></li>
+                    <li className="text-xl"><a href="/program">PROGRAM</a></li>
+                    <li className="text-xl"><a href="/hotels">HOTELS</a></li>
+                    <li className="text-xl"><a href="/guestlist">GUEST LIST</a></li>
+                    <li className="text-xl"><a href="/faq">FAQ</a></li>
                 </ul>
             </div>
         </nav>
