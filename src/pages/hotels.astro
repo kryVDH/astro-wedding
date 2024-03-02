@@ -14,7 +14,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
     <main class="min-h-screen mt-12">
         <div class="flex flex-col items-center pt-10 parallax relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
-            <h1 class="mx-auto text-4xl text-center pl-8 z-10">NEARBY HOTELS</h1>
+            <h1 class="mx-auto text-4xl text-center pl-8 z-10" style="font-family: 'WindSong';" transition:name="hotels-transition">HOTELS</h1>
             <dl class="flex flex-col gap-6 justify-center faq mb-32 z-10">
                 <div class="flex flex-col align justify-center">
                     <dt>The Grand Terminus Hotel</dt>
@@ -32,11 +32,13 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
                     <dt>Bairnsdale International</dt>
                     <dd>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 hotels-grid mt-4">
-                            <Image class="border-black border-2 border-solid" width={500} src={international} loading={'lazy'} alt="Grand terminus hotel" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
-                            <div class="flex flex-col justify-center md:items-start">
-                                <a class="font-bold">355 Main street, Bairnsdale VIC 3875</a>
-                                <a class="font-bold" href="tel:0351528300">03 5152 8300</a>
-                                <a class="font-bold" href="https://www.bairnsdaleinternational.com.au/">https://www.bairnsdaleinternational.com.au/</a>
+                            <div class="flex flex-col-reverse md:contents gap-8">
+                                <Image class="border-black border-2 border-solid" width={500} src={international} loading={'lazy'} alt="Grand terminus hotel" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
+                                <div class="flex flex-col justify-center md:items-start">
+                                    <a class="font-bold">355 Main street, Bairnsdale VIC 3875</a>
+                                    <a class="font-bold" href="tel:0351528300">03 5152 8300</a>
+                                    <a class="font-bold" href="https://www.bairnsdaleinternational.com.au/">https://www.bairnsdaleinternational.com.au/</a>
+                                </div>
                             </div>
                         </div>
                     </dd>
@@ -56,11 +58,13 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
                     <dt>Mitchell on Main</dt>
                     <dd>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 hotels-grid mt-4">
-                            <Image class="border-black border-2 border-solid" width={500} src={mitchellonmain} loading={'lazy'} alt="Grand terminus hotel" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
-                            <div class="flex flex-col justify-center md:items-start">
-                                <a class="font-bold">291-295  Main Street, Bairnsdale VIC 3875</a>
-                                <a class="font-bold" href="tel:0351525012">03 5152 5012</a>
-                                <a class="font-bold" href="https://www.mitchellonmain.com.au/">https://www.mitchellonmain.com.au/</a>
+                            <div class="flex flex-col-reverse md:contents gap-8">
+                                <Image class="border-black border-2 border-solid" width={500} src={mitchellonmain} loading={'lazy'} alt="Grand terminus hotel" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
+                                <div class="flex flex-col justify-center md:items-start">
+                                    <a class="font-bold">291-295  Main Street, Bairnsdale VIC 3875</a>
+                                    <a class="font-bold" href="tel:0351525012">03 5152 5012</a>
+                                    <a class="font-bold" href="https://www.mitchellonmain.com.au/">https://www.mitchellonmain.com.au/</a>
+                                </div>
                             </div>
                         </div>
                     </dd>

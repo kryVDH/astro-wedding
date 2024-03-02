@@ -1,9 +1,11 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import { Image, getImage } from 'astro:assets';
 import { Icon } from 'astro-icon/components'
 import Player from '../components/react/Player';
 import Nav from '../components/react/nav';
-import '../styles/main.scss';	
+import '../styles/main.scss';
+import logo from '../photos/logo.png';
 
 interface Props {
 	title: string;
@@ -11,6 +13,7 @@ interface Props {
 
 const { title } = Astro.props;
 const backButtonVisible = Astro.url.pathname != '/';
+const optimizedLogo = await getImage({ src: logo, width: 1000 })
 
 ---
 
@@ -20,16 +23,16 @@ const backButtonVisible = Astro.url.pathname != '/';
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={optimizedLogo.src} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=WindSong:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Quattrocento&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<script src="https://kit.fontawesome.com/93785fb270.js" crossorigin="anonymous"></script>
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
 	<Nav backButtonVisible={backButtonVisible} client:load>
+		<Image width={44} src={logo} loading={'eager'} alt="Kyle and Jasmine logo" slot="logo"></Image>
 		<Icon name="mdi:menu" class="h-8 w-8 text-black open"></Icon>
 		<Icon name="mdi:close-box-outline" class="h-8 w-8 text-black close"></Icon>
 	</Nav>
