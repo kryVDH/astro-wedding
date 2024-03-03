@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const response = Astro.url.searchParams.get('rsvp')! || '';
+---
+
+<Layout title='RSVP Successful'>
+    <main class="min-h-screen mt-16 px-4">
+        <h1 transition:name="rsvp-transition" class="pt-10 whitespace-break-spaces flex items-center justify-center">
+            <span class="whitespace-break-spaces font-bold">R  S </span>
+            <span class="text-8xl -mt-2">v</span>
+            <span class="whitespace-break-spaces font-bold"> P</span>
+        </h1>
+        <div class="border-green-800 border-2 border-solid bg-green-200 py-2 px-6 w-fit success-message text-center" id="successMessage">Your RSVP has been registered successfully</div>
+        <p class="px-8 sm:px-20 font-semibold text-center text-base mx-auto leading-9 mt-4">Thank you so much for your response! { response.toLowerCase() === 'yes' ? "We can't wait to see you there." : "We are sorry you can't make it." }</p>
+    </main>
+</Layout>

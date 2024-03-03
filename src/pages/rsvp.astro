@@ -78,6 +78,7 @@ import Layout from '../layouts/Layout.astro';
             })
                 .then(() => {
                     document.getElementById('successMessage')?.classList.remove('hidden')
+                    window.location.href = `/rsvp-success?rsvp=${formData.get('canYouAttend')}`
                 })
                 .catch((error) => alert(error));
         };
