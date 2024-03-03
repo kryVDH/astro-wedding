@@ -4,7 +4,11 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title='RSVP'>
     <main class="min-h-screen mt-16 px-4">
-        <h1 transition:name="rsvp-transition" class="pt-10">RSVP</h1>
+        <h1 transition:name="rsvp-transition" class="pt-10 whitespace-break-spaces flex items-center justify-center">
+            <span class="whitespace-break-spaces font-bold">R  S </span>
+            <span class="text-8xl -mt-2">v</span>
+            <span class="whitespace-break-spaces font-bold"> P</span>
+        </h1>
         <form name="rsvp" class="mx-auto max-w-xl flex flex-col gap-8 px-8 justify-center pb-32 items-center" action="/" method="POST" data-netlify="true" netlify>
             <input type="hidden" name="form-name" value="rsvp">
             <div class="hidden border-green-800 border-2 border-solid bg-green-200 py-2 px-6 w-fit success-message" id="successMessage">Thank you! Your RSVP has been registered successfully</div>
