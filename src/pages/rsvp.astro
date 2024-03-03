@@ -40,19 +40,23 @@ import Layout from '../layouts/Layout.astro';
 
             <div class="field">
                 <label class="form-label" for="dietary">
-                    <span class="required-label">If you have any dietary requirements, please list them here.</span> <br/>Enter N/A if you have no dietary requirements.</label>
-                <input class="form-text" type="text" name="dietary" id="dietary" required>
+                    <span class="required-label">If you have any dietary requirements, please list them here.</span>
+                    <span class="block text-sm sub-label">Enter N/A if you have no dietary requirements.</span>
+                </label>
+                <textarea class="form-text" cols="3" name="dietary" id="dietary" required></textarea>
             </div>
 
             <div class="field">
                 <label class="form-label" for="kidsmeals">
-                    <span class="required-label">If you have any kids that will require a kids meal, please tell us here along with the quantity.</span> <br/>Enter N/A if no kids meals are required</label>
-                <input class="form-text" type="text" name="kidsmeals" id="kidsmeals" required>
+                    <span class="required-label">If you have any kids that will require a kids meal, please tell us here along with the quantity.</span> 
+                    <span class="block text-sm sub-label">Enter N/A if no kids meals are required.</span>
+                </label>
+                <textarea class="form-text" cols="3" name="kidsmeals" id="kidsmeals" required></textarea>
             </div>
 
             <div class="field">
                 <label class="form-label" for="comment">Comments</label>
-                <input class="form-text" type="text" name="comment" id="comment">
+                <textarea class="form-text" cols="3" name="comments" id="comments" required></textarea>
             </div>
 
             <div class="actions">
