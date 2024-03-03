@@ -13,7 +13,6 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
     <main class="min-h-screen mt-12">
         <div class="flex flex-col items-center pt-10 parallax relative min-h-screen pb-32 px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
-            <!-- <h1 class="my-8 z-10">Venue</h1> -->
             <div class="mx-auto z-10 mt-8 flex flex-col justify-center">
                 <h1 class="text-darkgreen" transition:name="venue-transition">Club Eastwood</h2>
                 <p class="text-xl mb-1 font-bold text-center" transition:name="venue-address">117 Great Alpine Road, Bairnsdale</p>
