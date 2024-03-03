@@ -13,7 +13,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage, width: 1000 })
     <main class="min-h-screen pt-4 mt-12">
         <div class="flex flex-col items-center pt-10 parallax relative px-4" style={`background-image: url(${optimizedBackgroundImage.src})`}>
             <div class="h-full w-full opacity-70 absolute top-0 bg-white"></div>
-            <h1 transition:name="guestlist-transition" class="z-10">Guest List</h1>
+            <h1 transition:name="guestlist-transition" class="z-10 tracking-widest">Guest List</h1>
             <Image class="z-10 border-black border-2 border-solid mt-8" width={700} src={guestlist} loading={'eager'} alt="Guest list page 1" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
             <div class="home-border mt-8 mb-8 z-10"></div>
             <Image class="z-10 border-black border-2 border-solid" width={700} src={guestlist2} loading={'lazy'} alt="Guest list page 2" style="box-shadow: 4px 4px 10px 4px #555;"></Image>
